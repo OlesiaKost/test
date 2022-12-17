@@ -1,0 +1,46 @@
+body {
+   height: 100vh;
+   color: rgb(90, 87, 87);
+}
+* {
+   box-sizing: border-box;
+}
+section {
+   height: 100vh;
+   padding: 3em;
+}
+h1 { 
+font-size: 5rem;
+}
+
+.overlay {
+   background: rgb(6, 47, 22);
+   color: rgb(15, 220, 114);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+
+   clip-path: circle(100px at 50% 50%);
+   clip-path: circle(100px at var(--x, 50%) var(--y, 50%));
+   transition: clip-path 100ms;
+}
+
+span {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   cursor: pointer;
+   background: rgb(6, 47, 22);
+   display: flex;
+}
+svg {
+   margin: 1em;
+   fill:  rgb(220, 15, 94);
+}
+
+.is-open {
+   clip-path: circle(200% at 100% 100%);
+   transition: clip-path 1.3s;
+   transition-timing-function: cubic-bezier(1, -0.01, .01, .99);
+}
